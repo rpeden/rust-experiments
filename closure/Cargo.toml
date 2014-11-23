@@ -1,0 +1,9 @@
+[package]
+
+name = "closure"
+version = "0.0.1"
+authors = [ "Ryan Peden" ]
+
+[[bin]]
+
+name = "closure"
