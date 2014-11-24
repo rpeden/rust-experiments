@@ -14,4 +14,7 @@ fn main() {
      Some(_) => println!("Houston, we have numbers"),
      None    =>	println!("Nothing found :("),
    }
+
+   let sum = range(1i, 4i).fold(0i, |sum, x| sum + x);
+   println!("sum is: {}", sum);
 }
