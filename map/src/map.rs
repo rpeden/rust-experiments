@@ -10,4 +10,8 @@ fn main() {
   	println!("{}", i);
   }
 
+  println!("\nFiltering!")
+  for i in range(1i, 10i).filter(|&x| x % 2 == 0) {
+  	println!("{}", i);
+  }
 }
