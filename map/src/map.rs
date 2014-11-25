@@ -4,4 +4,10 @@ fn main() {
   for num in new_numbers.iter() {
     println!("{}", num);
   }
+  
+  println!("\nCounting!");
+  for i in std::iter::count(1i, 5i).take(5) {
+  	println!("{}", i);
+  }
+
 }
