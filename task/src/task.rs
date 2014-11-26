@@ -1,17 +1,15 @@
+use std::io::Timer;
+use std::time::Duration;
+
 fn main() {
-  let new_numbers = range(1i, 100i).map(|x| x + 1i).collect::<Vec<int>>();
+  let (port, chan): (Port<int>, Chan<int>) = Chan::new();
 
-  for num in new_numbers.iter() {
-    println!("{}", num);
-  }
-  
-  println!("\nCounting!");
-  for i in std::iter::count(1i, 5i).take(5) {
-  	println!("{}", i);
+  do spawn || {
+    timer::sleep(Duration::seconds(5));
+    println!("first computation");
+    chan.send(5i);
   }
 
-  println!("\nFiltering!")
-  for i in range(1i, 10i).filter(|&x| x % 2 == 0) {
-  	println!("{}", i);
-  }
+  println!("second computation");
+  let result = port.recv();
 }
