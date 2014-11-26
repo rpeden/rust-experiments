@@ -17,4 +17,15 @@ fn main() {
 
    let sum = range(1i, 4i).fold(0i, |sum, x| sum + x);
    println!("sum is: {}", sum);
+
+   let some_numbers = range(1i, 1000i)
+                      .filter(|&x| x % 2 == 0)
+                      .filter(|&x| x % 3 == 0)
+                      .take(5)
+                      .collect::<Vec<int>>();
+
+    for num in some_numbers.iter() {
+      println!("{}", num);
+    }
+
 }
