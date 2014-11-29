@@ -1,0 +1,9 @@
+[package]
+
+name = "structs"
+version = "0.0.1"
+authors = [ "Ryan Peden" ]
+
+[[bin]]
+
+name = "structs"
