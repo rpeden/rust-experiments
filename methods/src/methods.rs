@@ -5,6 +5,9 @@ struct Circle {
 }
 
 impl Circle {
+  fn area(&self) -> f64 {
+
+  }
 }
 
 fn main() {
