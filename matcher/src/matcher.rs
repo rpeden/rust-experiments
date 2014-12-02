@@ -5,5 +5,12 @@ fn cmp(a: int, b: int) -> Ordering {
 }
 
 fn main() {
+  let x = 5i;
+  let y = 10i;
 
+  match cmp(x, y) {
+    Less      => println!("less"),
+    Greater   => println!("greater"),
+    Equal     => println!("equal")
+  }
 }
