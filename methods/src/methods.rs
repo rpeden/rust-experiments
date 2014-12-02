@@ -6,7 +6,7 @@ struct Circle {
 
 impl Circle {
   fn area(&self) -> f64 {
-
+    std::f64::consts:PI * (self.radius * self.radius)
   }
 }
 
