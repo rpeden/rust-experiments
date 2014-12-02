@@ -4,5 +4,8 @@ struct Circle {
   radius: f64
 }
 
+impl Circle {
+}
+
 fn main() {
 }
